@@ -1,0 +1,9 @@
+Mastermind notes and approaches
+My approaches:
+
+1. Construct the board
+2. Display the board
+2. Construct code breaker logic
+
+3. Prompt for user guess
+4. 
