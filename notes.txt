@@ -3,7 +3,35 @@ My approaches:
 
 1. Construct the board
 2. Display the board
-2. Construct code breaker logic
+3. Hints -- X is right position, O is right color, wrong decision
 
-3. Prompt for user guess
-4. 
+
+Construct code breaker logic
+1. Computer creates code randomly
+2. User guesses code
+3. Check code
+4. Return response
+5. Repeat 2-4 as needed
+
+Construct code maker logic
+1. User inputs code
+2. Computer guesses code following algorithm
+3. check code
+4. deply response
+5. repeat 2-4 as needed
+
+
+notes
+
+X is right number, Right place
+0 is right number, Wrong place
+
+
+Pseudocode for checking guess
+take a guess in
+Check: how many guesses are the correct number in the correct solution?
+show hints correctly
+for each remaining item
+  if so, add an item to the hint and
+  delete the first number that matches the guesssed number in the solution
+    
