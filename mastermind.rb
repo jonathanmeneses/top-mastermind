@@ -1,4 +1,4 @@
-
+require "pry-byebug"
 class Board
   attr_accessor :round, :solution, :last_guess, :hints, :outcome
   def initialize
@@ -22,18 +22,21 @@ class Board
     hints = []
     solution = self.solution.dup
     check_guess = guess.dup
-    guess.each_with_index do |element, index|
-      if self.solution[index] == element
-        hints.push('X')
-        solution.delete_at(index)
-        check_guess.delete_at(index)
+    check_guess.each_with_index do |element, index|
+      if solution[index] == element
+        hints.push("X")
+        check_guess[index] = nil
+        solution[index] = nil
+      # binding.pry
       end
     end
+    # binding.pry
     check_guess.each_with_index do |element,index|
-      if solution.include?(element)
-        solution.delete(element)
+      if element and solution.include?(element)
+        solution[solution.find_index(element)] = nil
         hints.push("O")
       end
+
     end
     return hints.reverse
   end
