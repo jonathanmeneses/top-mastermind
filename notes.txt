@@ -35,3 +35,8 @@ for each remaining item
   if so, add an item to the hint and
   delete the first number that matches the guesssed number in the solution
     
+Next steps:
+1. Hint Updates -- it's sending duplicates
+2. Review "check_guess" for bug
+3. Fix readability of outputs
+4. Code computer guess process

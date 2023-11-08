@@ -62,7 +62,7 @@ class Board
     puts "shall we begin? \n \n \n"
     while playing_game
       puts "Round #{self.round}"
-      self.last_guess = get_guess()
+      self.last_guess = self.get_guess()
       if self.last_guess == self.solution
         self.outcome = 'win'
         playing_game = false
